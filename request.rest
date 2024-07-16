@@ -1,0 +1,40 @@
+###
+curl -X POST \
+  http://localhost:3000/api/signup \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "username" : "test54",
+    "email" : "test89@mail.com",
+    "password" : "test321",
+    "merek_mesin" : "yundai"
+  }'
+
+###
+curl -X POST \
+  http://localhost:3000/api/login \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "username" : "test54",
+    "password" : "test321"
+  }'
+
+###
+
+
+curl -X GET   \
+  http://localhost:3000/api/proximity \
+  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QwMiIsImV4cGlyZXNJbiI6MzYwMDAsImlhdCI6MTcxMTUyODEwMX0.pc-6wUJa_nD-Peuwic9g2KvG8U4AHowfcfcrEA0ly2M'
+###
+curl -X POST  \
+  http://localhost:3000/api/proximity \
+  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QwMiIsImV4cGlyZXNJbiI6MzYwMDAsImlhdCI6MTcxMTUyODEwMX0.pc-6wUJa_nD-Peuwic9g2KvG8U4AHowfcfcrEA0ly2M'\
+  -H 'Content-Type: application/json' \
+  -d '{
+    "cycle": 23,
+    "mesin_username":"test02"
+  }'
+###
+curl -X GET \
+  http://localhost:3000/api/proximity \
+  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QwMiIsImV4cGlyZXNJbiI6MzYwMDAsImlhdCI6MTcxMTUyODEwMX0.pc-6wUJa_nD-Peuwic9g2KvG8U4AHowfcfcrEA0ly2M'
+###
